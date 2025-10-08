@@ -1,0 +1,146 @@
+[
+  {
+    "image": "https://i.ibb.co.com/RGM6wmhv/demo-app-2.webp",
+    "title": "FitTrack",
+    "companyName": "ActiveMind Tech",
+    "id": 3,
+    "description": "Your personal fitness tracker that monitors workouts, calories, and daily progress.",
+    "size": 63,
+    "reviews": 2300,
+    "ratingAvg": 4.8,
+    "downloads": 800000,
+    "ratings": [
+      { "name": "1 star", "count": 60 },
+      { "name": "2 star", "count": 70 },
+      { "name": "3 star", "count": 120 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 1750 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/gLbtMpdt/demo-app-6.webp",
+    "title": "BudgetBee",
+    "companyName": "FinGrow Solutions",
+    "id": 6,
+    "description": "Easily manage your expenses and track your financial goals with smart insights.",
+    "size": 51,
+    "reviews": 2750,
+    "ratingAvg": 4.7,
+    "downloads": 950000,
+    "ratings": [
+      { "name": "1 star", "count": 80 },
+      { "name": "2 star", "count": 120 },
+      { "name": "3 star", "count": 240 },
+      { "name": "4 star", "count": 600 },
+      { "name": "5 star", "count": 1710 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/W4S4ypKG/Screenshot-2025-10-08-091013.png",
+    "title": "StudyMate",
+    "companyName": "Learnify Labs",
+    "id": 7,
+    "description": "An AI-powered study assistant that helps students plan, revise, and stay productive.",
+    "size": 64,
+    "reviews": 3100,
+    "ratingAvg": 4.9,
+    "downloads": 1100000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 110 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 2580 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/zhDnvJL5/Screenshot-2025-10-08-091325.png",
+    "title": "MindEase",
+    "companyName": "Calmify Studio",
+    "id": 10,
+    "description": "Relax your mind with guided meditation, music, and mindfulness exercises.",
+    "size": 53,
+    "reviews": 5000,
+    "ratingAvg": 4.8,
+    "downloads": 1900000,
+    "ratings": [
+      { "name": "1 star", "count": 120 },
+      { "name": "2 star", "count": 160 },
+      { "name": "3 star", "count": 300 },
+      { "name": "4 star", "count": 900 },
+      { "name": "5 star", "count": 3520 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/1Y2gc4Rw/Screenshot-2025-10-08-091524.png",
+    "title": "TaskFlow",
+    "companyName": "NovaSoft Ltd.",
+    "id": 1,
+    "description": "A smart task management app that helps teams collaborate and track progress effortlessly.",
+    "size": 45,
+    "reviews": 1250,
+    "ratingAvg": 4.6,
+    "downloads": 500000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 80 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 670 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/b5Qmb8qZ/Screenshot-2025-10-08-091725.png",
+    "title": "CookBook+",
+    "companyName": "YummyBits Co.",
+    "id": 14,
+    "description": "Discover and share recipes from around the world with step-by-step videos.",
+    "size": 77,
+    "reviews": 3600,
+    "ratingAvg": 4.6,
+    "downloads": 1200000,
+    "ratings": [
+      { "name": "1 star", "count": 150 },
+      { "name": "2 star", "count": 200 },
+      { "name": "3 star", "count": 400 },
+      { "name": "4 star", "count": 900 },
+      { "name": "5 star", "count": 1950 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/chBf4HDs/Screenshot-2025-10-08-092036.png",
+    "title": "LangBuddy",
+    "companyName": "PolyLingua",
+    "id": 12,
+    "description": "Learn new languages with AI chat partners and interactive lessons.",
+    "size": 70,
+    "reviews": 2700,
+    "ratingAvg": 4.7,
+    "downloads": 900000,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 120 },
+      { "name": "3 star", "count": 230 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 1750 }
+    ]
+  },
+  {
+    "image": "https://i.ibb.co.com/zHFjbbVc/Screenshot-2025-10-08-092246.png",
+    "title": "SecureVault",
+    "companyName": "SafeLock Systems",
+    "id": 15,
+    "description": "Keep your passwords and sensitive files secure with military-grade encryption.",
+    "size": 42,
+    "reviews": 2900,
+    "ratingAvg": 4.9,
+    "downloads": 850000,
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 2400 }
+    ]
+  }
+]
