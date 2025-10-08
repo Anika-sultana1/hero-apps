@@ -1,7 +1,7 @@
 [
   {
     "image": "https://i.ibb.co.com/RGM6wmhv/demo-app-2.webp",
-    "title": "FitTrack",
+    "title": "FitTrack: Fitness & Workout Tracker",
     "companyName": "ActiveMind Tech",
     "id": 3,
     "description": "Your personal fitness tracker that monitors workouts, calories, and daily progress.",
@@ -19,7 +19,7 @@
   },
   {
     "image": "https://i.ibb.co.com/gLbtMpdt/demo-app-6.webp",
-    "title": "BudgetBee",
+    "title": "BudgetBee: Smart Expense Tracker",
     "companyName": "FinGrow Solutions",
     "id": 6,
     "description": "Easily manage your expenses and track your financial goals with smart insights.",
@@ -37,7 +37,7 @@
   },
   {
     "image": "https://i.ibb.co.com/W4S4ypKG/Screenshot-2025-10-08-091013.png",
-    "title": "StudyMate",
+    "title": "StudyMate: AI Study Assistant",
     "companyName": "Learnify Labs",
     "id": 7,
     "description": "An AI-powered study assistant that helps students plan, revise, and stay productive.",
@@ -54,8 +54,8 @@
     ]
   },
   {
-    "image": "https://i.ibb.co.com/zhDnvJL5/Screenshot-2025-10-08-091325.png",
-    "title": "MindEase",
+    "image": "https://i.ibb.co.com/Jj4nJNN8/Screenshot-2025-10-08-190637.png",
+    "title": "MindEase: Meditation & Relaxation",
     "companyName": "Calmify Studio",
     "id": 10,
     "description": "Relax your mind with guided meditation, music, and mindfulness exercises.",
@@ -73,7 +73,7 @@
   },
   {
     "image": "https://i.ibb.co.com/1Y2gc4Rw/Screenshot-2025-10-08-091524.png",
-    "title": "TaskFlow",
+    "title": "TaskFlow: ToDo List with Reminder",
     "companyName": "NovaSoft Ltd.",
     "id": 1,
     "description": "A smart task management app that helps teams collaborate and track progress effortlessly.",
@@ -91,7 +91,7 @@
   },
   {
     "image": "https://i.ibb.co.com/b5Qmb8qZ/Screenshot-2025-10-08-091725.png",
-    "title": "CookBook+",
+    "title": "CookBook+: Recipes & Videos",
     "companyName": "YummyBits Co.",
     "id": 14,
     "description": "Discover and share recipes from around the world with step-by-step videos.",
@@ -109,7 +109,7 @@
   },
   {
     "image": "https://i.ibb.co.com/chBf4HDs/Screenshot-2025-10-08-092036.png",
-    "title": "LangBuddy",
+    "title": "LangBuddy: AI Language Tutor",
     "companyName": "PolyLingua",
     "id": 12,
     "description": "Learn new languages with AI chat partners and interactive lessons.",
@@ -127,7 +127,7 @@
   },
   {
     "image": "https://i.ibb.co.com/zHFjbbVc/Screenshot-2025-10-08-092246.png",
-    "title": "SecureVault",
+    "title": "SecureVault: Password Manager",
     "companyName": "SafeLock Systems",
     "id": 15,
     "description": "Keep your passwords and sensitive files secure with military-grade encryption.",
