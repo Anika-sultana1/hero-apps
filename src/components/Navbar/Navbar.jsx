@@ -53,7 +53,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="max-w-[1200px] bg-[#FFFFFF] mx-auto py-3">
+    <div className=" bg-[#FFFFFF] px-15 py-3">
       <div className="navbar ">
         <div className="navbar-start flex gap-1">
           <Link to={"/"}>
