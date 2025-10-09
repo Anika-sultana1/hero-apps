@@ -1,7 +1,7 @@
-import { useLoaderData } from "react-router";
+import { Link, useLoaderData } from "react-router";
 import App from "./App";
 import { useState } from "react";
-import appError from '../../assets/App-Error.png'
+import appError from "../../assets/App-Error.png";
 
 const Apps = () => {
   const appsData = useLoaderData();
@@ -49,28 +49,31 @@ const Apps = () => {
             </svg>
             <input type="search" required placeholder="Search Apps" />
           </label>
-
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-5">
           {filteredApps.length > 0 ? (
             filteredApps.map((appData) => (
-                <App appData={appData} key={appData.id}></App>
-           
+              <App appData={appData} key={appData.id}></App>
             ))
           ) : (
-         <div className="relative left-[450px] my-5 ">
-               <img className=" " src={appError} alt="" />
-            <p className="text-4xl my-3 text-gray-600">
-
-              No App Found
-            </p>
-         </div>
+            <div className="relative left-[450px] text-center my-5 ">
+              <img className=" " src={appError} alt="" />
+              <p className="text-3xl my-3 text-gray-600 whitespace-nowrap">
+                OPPS!! APP NOT FOUND
+              </p>
+              <p>
+                The App you are requesting is not found on our system. please
+                try another apps
+              </p>
+             <Link to='/apps'> <button className="bg-gradient-to-r from-[#632EE3] to-[#9F62F2] p-2 px-4 rounded-[5px] text-white mt-2">
+                Go Back!
+              </button></Link>
+            </div>
           )}
         </div>
-            </div>
       </div>
-    
+    </div>
   );
 };
 

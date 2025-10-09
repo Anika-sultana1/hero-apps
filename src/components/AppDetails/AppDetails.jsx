@@ -6,13 +6,13 @@ import { useLoaderData, useParams } from "react-router";
 import Rechart from "../Rechart/Rechart";
 import { toast, ToastContainer } from "react-toastify";
 import AppDescription from "../Description/AppDescription";
+import { addToStoredDB } from "../Utility/AddToDB";
 
 const AppDetails = () => {
   const { id } = useParams();
   const appId = parseInt(id);
   const data = useLoaderData();
   const singleApp = data.find((app) => app.id === appId);
-
   const {
     image,
     title,
@@ -26,13 +26,11 @@ const AppDetails = () => {
   } = singleApp;
 
 const [installed, setInstalled] = useState(false)
-const [showToast, setShowToast] = useState(false)
 
-const handleInstall = ()=> {
+const handleInstall = (id)=> {
   setInstalled(true)
-  setShowToast(true)
    toast.success('Successfully Installed!')
-
+ addToStoredDB(id);
 }
 
 const reverseRatings = [...ratings].reverse(); 
@@ -68,7 +66,7 @@ const reverseRatings = [...ratings].reverse();
             </div>
           </div>
           <div className="my-3">
-            <button onClick={handleInstall}
+            <button onClick={()=>handleInstall(id)}
             disabled={installed} 
             
              className={`text-white px-5 py-2 rounded-[5px] ${
@@ -83,7 +81,7 @@ const reverseRatings = [...ratings].reverse();
       </div>
       <div className="divider pb-10 px-15"></div>
        <ToastContainer></ToastContainer>
-      <div>
+      <div className=" pb-10 px-15">
         
           <Rechart reverseRatings = {reverseRatings}></Rechart>
          
