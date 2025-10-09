@@ -1,4 +1,4 @@
-import { Link, useLoaderData } from "react-router";
+import { Link, useLoaderData, useNavigate } from "react-router";
 import App from "./App";
 import { useState } from "react";
 import appError from "../../assets/App-Error.png";
@@ -20,6 +20,14 @@ const Apps = () => {
       setLoading(false);
     }, 500);
   };
+
+  const navigate = useNavigate();
+  const handleGoBack = ()=> {
+    navigate(-1)
+  }
+
+
+
 
   return (
     <div className="bg-[#D2D2D2] md:px-10">
@@ -63,7 +71,7 @@ const Apps = () => {
                 The App you are requesting is not found on our system. please
                 try another apps
               </p>
-             <Link to='/apps'> <button className="bg-gradient-to-r from-[#632EE3] to-[#9F62F2] p-2 px-4 rounded-[5px] text-white mt-2">
+             <Link to='/apps'> <button onClick={handleGoBack} className="bg-gradient-to-r from-[#632EE3] to-[#9F62F2] p-2 px-4 rounded-[5px] text-white mt-2">
                 Go Back!
               </button></Link>
             </div>
