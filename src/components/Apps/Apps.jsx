@@ -2,10 +2,12 @@ import { Link, useLoaderData } from "react-router";
 import App from "./App";
 import { useState } from "react";
 import appError from "../../assets/App-Error.png";
+import Loader from "../pages/loader";
+import searchIcon from '../../assets/icons8-search-30.png'
 
 const Apps = () => {
   const appsData = useLoaderData();
-
+ const [loading, setLoading] = useState(false)
   const [searchApp, setSearchApp] = useState("");
   const filteredApps = appsData.filter((app) =>
     app.title.toLowerCase().includes(searchApp.toLowerCase())
@@ -13,10 +15,15 @@ const Apps = () => {
 
   const handleSearchApp = (e) => {
     setSearchApp(e.target.value);
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false);
+    }, 500);
   };
 
   return (
-    <div className="bg-[#D2D2D2] px-10">
+    <div className="bg-[#D2D2D2] md:px-10">
+     
       <div className="text-center py-3">
         <h1 className="font-bold text-3xl my-2">Our All Applications</h1>
         <p className="text-[#627382]">
@@ -27,30 +34,20 @@ const Apps = () => {
             ({filteredApps.length}) Apps Found
           </p>
 
-          <label
-            onChange={handleSearchApp}
-            className="input border-2 border-gray-400 bg-[#D2D2D2] "
-          >
-            <svg
-              className="h-[1em]"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-            >
-              <g
-                strokeLinejoin="round"
-                strokeLinecap="round"
-                strokeWidth="2.5"
-                fill="none"
-                stroke="currentColor"
-              >
-                <circle cx="11" cy="11" r="8"></circle>
-                <path d="m21 21-4.3-4.3"></path>
-              </g>
-            </svg>
-            <input type="search" required placeholder="Search Apps" />
-          </label>
+   <label className="input border-2 border-gray-400 bg-[#D2D2D2] ">
+  <img src={searchIcon} className="w-[15px] h-[15px]" alt="" />
+  <input
+    type="search"
+    value={searchApp}            
+    onChange={handleSearchApp} 
+    required
+    placeholder="Search Apps"
+  />
+</label>
         </div>
-
+<div className="my-4">
+   <Loader  loading={loading}></Loader>
+</div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-5">
           {filteredApps.length > 0 ? (
             filteredApps.map((appData) => (
@@ -60,7 +57,7 @@ const Apps = () => {
             <div className="relative left-[450px] text-center my-5 ">
               <img className=" " src={appError} alt="" />
               <p className="text-3xl my-3 text-gray-600 whitespace-nowrap">
-                OPPS!! APP NOT FOUND
+                 APP NOT FOUND
               </p>
               <p>
                 The App you are requesting is not found on our system. please

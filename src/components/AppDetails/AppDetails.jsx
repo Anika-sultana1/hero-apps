@@ -6,7 +6,8 @@ import { useLoaderData, useParams } from "react-router";
 import Rechart from "../Rechart/Rechart";
 import { toast, ToastContainer } from "react-toastify";
 import AppDescription from "../Description/AppDescription";
-import { addToStoredDB } from "../Utility/AddToDB";
+import { addToStoredDB, getStoredApp } from "../Utility/AddToDB";
+import Loader from "../pages/loader";
 
 const AppDetails = () => {
   const { id } = useParams();
@@ -25,72 +26,79 @@ const AppDetails = () => {
     ratings,
   } = singleApp;
 
-const [installed, setInstalled] = useState(false)
+  const [installed, setInstalled] = useState(false);
 
-const handleInstall = (id)=> {
-  setInstalled(true)
-   toast.success('Successfully Installed!')
- addToStoredDB(id);
-}
+  const handleInstall = (id) => {
+  const installedApps = getStoredApp();
 
-const reverseRatings = [...ratings].reverse(); 
+  if(installedApps.includes(String(id))){
+    toast.error('App already installed!');
+  return;
+  }
+
+    setTimeout(() => {
+      setInstalled(true);
+      toast.success("Successfully Installed!");
+    }, 1000);
+    addToStoredDB(id);
+  };
+
+  const reverseRatings = [...ratings].reverse();
 
   return (
-    
     <div className="bg-[#D2D2D2]">
-      <div className="card card-side px-15 py-5 ">
+      <div className="card card-side md:px-15 py-5 ">
         <figure>
-          <img className="w-[350px] h-[350px] rounded-2xl" src={image} alt="" />
+          <img className=" md:w-[350px] md:h-[350px] hidden md:block  md:rounded-2xl" src={image} alt="" />
         </figure>
-        <div className="card-body px-10">
+        <div className="card-body md:px-10">
           <h2 className="card-title">{title}</h2>
           <p>
-            Developed by <span className="bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent">{companyName}</span>
+            Developed by  {''}
+             <span className="bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent">
+              {companyName}
+            </span>
           </p>
           <div className="divider"></div>
-          <div className=" flex gap-20 ">
+          <div className=" flex md:gap-20 ">
             <div className="flex flex-col  ">
               <img className="w-[30px] h-[30px]" src={downloadIcon} alt="" />
-              <p className="text-[24px] my-3 text-[#001931]">Downloads</p>
-              <p className="font-bold text-5xl">{downloads}</p>
+              <p className=" md:text-[24px] my-3 text-[#001931]">Downloads</p>
+              <p className="font-bold md:text-5xl">{downloads}</p>
             </div>
             <div className="flex flex-col  ">
               <img className="w-[30px] h-[30px]" src={starIcon} alt="" />
-              <p className="text-[24px] my-3 text-[#001931]">Average Ratings</p>
-              <p className="font-bold text-5xl">{ratingAvg}</p>
+              <p className=" md:text-[24px] my-3 text-[#001931]">Average Ratings</p>
+              <p className="font-bold md:text-5xl">{ratingAvg}</p>
             </div>
             <div className="flex flex-col  ">
               <img className="w-[30px] h-[30px]" src={reviewIcon} alt="" />
-              <p className="text-[24px] my-3 text-[#001931]">Total Reviews</p>
-              <p className="font-bold text-5xl">{reviews}</p>
+              <p className=" md:text-[24px] my-3 text-[#001931]">Total Reviews</p>
+              <p className="font-bold tmd:ext-5xl">{reviews}</p>
             </div>
           </div>
           <div className="my-3">
-            <button onClick={()=>handleInstall(id)}
-            disabled={installed} 
-            
-             className={`text-white px-5 py-2 rounded-[5px] ${
-                installed ? "bg-gray-400 cursor-not-allowed"  : "bg-[#46ac4f]" 
-              }`}>
-                {installed ? "Installed" : `Install (${size}MB)`}
-          
-            
+            <button
+              onClick={() => handleInstall(id)}
+              disabled={installed}
+              className={`text-white px-5 py-2 rounded-[5px] ${
+                installed ? "bg-gray-400 cursor-not-allowed" : "bg-[#46ac4f]"
+              }`}
+            >
+              {installed ? "Installed" : `Install (${size}MB)`}
             </button>
           </div>
         </div>
       </div>
       <div className="divider pb-10 px-15"></div>
-       <ToastContainer></ToastContainer>
-      <div className=" pb-10 px-15">
-        
-          <Rechart reverseRatings = {reverseRatings}></Rechart>
-         
-      </div>
-   
-        <AppDescription description={description}></AppDescription>
-     
-    </div>
+      <ToastContainer></ToastContainer>
 
+      <div className=" pb-10 md:px-15">
+        <Rechart reverseRatings={reverseRatings}></Rechart>
+      </div>
+       <div className="divider pb-10 px-15"></div>
+      <AppDescription description={description}></AppDescription>
+    </div>
   );
 };
 

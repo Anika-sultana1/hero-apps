@@ -13,7 +13,7 @@ const Footer = () => {
    <p className='  font-bold text-xl'>HERO.IO</p>
   </aside>
    </footer>
-<footer className="footer sm:footer-horizontal bg-[#113658] text-neutral-content p-10 rounded-2xl">
+<footer className="footer sm:footer-horizontal  bg-[#113658] text-neutral-content p-10 rounded-2xl">
   <nav>
     <h6 className="footer-title">Services</h6>
     <a className="link link-hover">Branding</a>

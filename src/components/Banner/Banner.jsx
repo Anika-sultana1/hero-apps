@@ -5,17 +5,17 @@ import appStore from '../../assets/app-store.png'
 const Banner = () => {
   return (
     <div className="text-center ">
-      <h1 className="font-bold text-5xl text-[#001931] mt-10">
+      <h1 className="font-bold text-5xl text-[#001931] pt-10">
         We Build <br />
         <span className="bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text  text-transparent">
           {" "}
           Productive{" "}
         </span>
-         Apps
+         Apps
       </h1>
       <p className="text-[#627382] my-3">
-        At HERO.IO , we craft innovative apps designed to make everyday life
-        simpler, smarter, and more exciting. <br />   Our goal is to turn your
+        At HERO.IO , we craft innovative apps designed to make everyday life
+        simpler, smarter, and more exciting. <br />  Our goal is to turn your
         ideas into digital experiences that truly make an impact.
       </p>
       <div className="flex justify-center items-center">
