@@ -61,17 +61,17 @@ const AppDetails = () => {
           </p>
           <div className="divider"></div>
           <div className=" flex md:gap-20 ">
-            <div className="flex flex-col  ">
+            <div className="flex flex-col  ml-2">
               <img className="w-[30px] h-[30px]" src={downloadIcon} alt="" />
               <p className=" md:text-[24px] my-3 text-[#001931]">Downloads</p>
               <p className="font-bold md:text-5xl">{downloads}</p>
             </div>
-            <div className="flex flex-col  ">
+            <div className="flex flex-col  ml-2">
               <img className="w-[30px] h-[30px]" src={starIcon} alt="" />
               <p className=" md:text-[24px] my-3 text-[#001931]">Average Ratings</p>
               <p className="font-bold md:text-5xl">{ratingAvg}</p>
             </div>
-            <div className="flex flex-col  ">
+            <div className="flex flex-col ml-2 ">
               <img className="w-[30px] h-[30px]" src={reviewIcon} alt="" />
               <p className=" md:text-[24px] my-3 text-[#001931]">Total Reviews</p>
               <p className="font-bold tmd:ext-5xl">{reviews}</p>
